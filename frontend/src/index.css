@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 222 47% 3%;
+        --foreground: 210 40% 98%;
+        --card: 217 33% 10%;
+        --card-foreground: 210 40% 98%;
+        --popover: 222 47% 5%;
+        --popover-foreground: 210 40% 98%;
+        --primary: 168 76% 50%;
+        --primary-foreground: 222 47% 5%;
+        --secondary: 217 33% 17%;
+        --secondary-foreground: 210 40% 98%;
+        --muted: 217 33% 17%;
+        --muted-foreground: 215 20.2% 65.1%;
+        --accent: 199 89% 48%;
+        --accent-foreground: 210 40% 98%;
+        --destructive: 350 89% 60%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 217 33% 17%;
+        --input: 217 33% 17%;
+        --ring: 168 76% 50%;
+        --radius: 0.5rem;
+        --success: 160 84% 39%;
+        --chart-1: 168 76% 50%;
+        --chart-2: 199 89% 48%;
+        --chart-3: 239 84% 67%;
+        --chart-4: 350 89% 60%;
+        --chart-5: 45 93% 47%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground antialiased;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Manrope', sans-serif;
+        letter-spacing: -0.02em;
+    }
+}
+
+@layer utilities {
+    .glass-effect {
+        @apply backdrop-blur-xl bg-slate-950/70 border border-slate-800/50 shadow-2xl;
+    }
+    
+    .glow-primary {
+        box-shadow: 0 0 20px -5px rgba(45, 212, 191, 0.3);
+    }
+    
+    .glow-accent {
+        box-shadow: 0 0 20px -5px rgba(14, 165, 233, 0.3);
+    }
+    
+    .hero-glow {
+        background: radial-gradient(circle at 50% 0%, rgba(45, 212, 191, 0.15) 0%, transparent 50%);
+    }
+    
+    .card-hover-gradient {
+        background: linear-gradient(180deg, rgba(30, 41, 59, 0) 0%, rgba(45, 212, 191, 0.05) 100%);
+    }
+    
+    .deep-shadow {
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+    
+    .text-gradient {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-cyan-400;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}
+
+/* Debug wrapper fix */
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-style: inherit;
+        border-bottom-style: inherit;
+        border-left-color: inherit;
+        border-right-color: inherit;
+        border-top-color: inherit;
+        border-bottom-color: inherit;
+    }
+}

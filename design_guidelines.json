@@ -1,0 +1,194 @@
+{
+  "identity": {
+    "name": "E1: The Anti-AI Designer",
+    "theme_name": "Nocturnal Healing",
+    "core_philosophy": "Sterile Precision meets Bioluminescent Warmth. A dark-mode-first experience that reduces eye strain for night-shift staff while offering comforting clarity for anxious patients.",
+    "archetype": "Bioluminescent Health (Organic & Earthy + Electric Accents)"
+  },
+  "typography": {
+    "headings": {
+      "family": "Manrope",
+      "weights": ["400", "600", "800"],
+      "usage": "Use for all page titles, modal headers, and department names. Tracking tight (-0.02em).",
+      "import_url": "https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    },
+    "body": {
+      "family": "Plus Jakarta Sans",
+      "weights": ["400", "500", "600"],
+      "usage": "Use for all interface text, labels, and data tables. High legibility at small sizes."
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#020617",
+      "surface": "#0f172a",
+      "surface_highlight": "#1e293b",
+      "primary": "#2dd4bf",
+      "primary_foreground": "#020617",
+      "secondary": "#6366f1",
+      "accent": "#0ea5e9",
+      "text_main": "#f8fafc",
+      "text_muted": "#94a3b8",
+      "border": "#1e293b",
+      "success": "#10b981",
+      "error": "#f43f5e"
+    },
+    "gradients": {
+      "hero_glow": "radial-gradient(circle at 50% 0%, rgba(45, 212, 191, 0.15) 0%, transparent 50%)",
+      "card_hover": "linear-gradient(180deg, rgba(30, 41, 59, 0) 0%, rgba(45, 212, 191, 0.05) 100%)"
+    },
+    "tailwind_config_extension": {
+      "colors": {
+        "background": "hsl(222, 47%, 11%)",
+        "foreground": "hsl(210, 40%, 98%)",
+        "card": "hsl(217, 33%, 17%)",
+        "card-foreground": "hsl(210, 40%, 98%)",
+        "popover": "hsl(222, 47%, 11%)",
+        "popover-foreground": "hsl(210, 40%, 98%)",
+        "primary": "hsl(168, 76%, 50%)",
+        "primary-foreground": "hsl(222, 47%, 11%)",
+        "secondary": "hsl(217, 33%, 17%)",
+        "secondary-foreground": "hsl(210, 40%, 98%)",
+        "muted": "hsl(217, 33%, 17%)",
+        "muted-foreground": "hsl(215, 20.2%, 65.1%)",
+        "accent": "hsl(217, 33%, 17%)",
+        "accent-foreground": "hsl(210, 40%, 98%)",
+        "destructive": "hsl(0, 62.8%, 30.6%)",
+        "destructive-foreground": "hsl(210, 40%, 98%)",
+        "border": "hsl(217, 33%, 17%)",
+        "input": "hsl(217, 33%, 17%)",
+        "ring": "hsl(168, 76%, 50%)"
+      }
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": {
+      "style": "backdrop-blur-xl bg-slate-950/70 border border-slate-800/50 shadow-2xl",
+      "usage": "Sticky headers, Modal overlays, Toast notifications"
+    },
+    "borders": {
+      "tracing_beam": "Use a moving gradient border for active states or selected items.",
+      "subtle": "1px solid rgba(148, 163, 184, 0.1)"
+    },
+    "shadows": {
+      "glow": "0 0 20px -5px rgba(45, 212, 191, 0.3)",
+      "deep": "0 25px 50px -12px rgba(0, 0, 0, 0.5)"
+    }
+  },
+  "layout_strategies": {
+    "landing_page": {
+      "type": "Split Screen Asymmetry",
+      "description": "Left side: Immersive 3D/Abstract medical art with 'Hero Glow'. Right side: Functional Role Selection.",
+      "grid": "grid-cols-1 lg:grid-cols-2"
+    },
+    "patient_dashboard": {
+      "type": "Bento Grid (Mode A)",
+      "description": "Department cards vary in size. 'Cardiology' and 'Neurology' are Hero cards (col-span-2). Others are standard.",
+      "spacing": "gap-6 p-6 md:p-12"
+    },
+    "doctor_admin_dashboard": {
+      "type": "Control Room (Mode B)",
+      "description": "High density. Sticky headers. Alternating row colors for tables. 100% width utilization.",
+      "spacing": "gap-4 p-4"
+    }
+  },
+  "components": {
+    "RoleSelector": {
+      "path": "/app/frontend/src/components/RoleSelector.js",
+      "style": "Large vertical cards with glass effect. Hovering expands the card slightly and reveals a 'Enter Portal' button.",
+      "icon_strategy": "Use large, thin Lucide icons (User, Stethoscope, Shield)."
+    },
+    "DepartmentCard": {
+      "path": "/app/frontend/src/components/DepartmentCard.js",
+      "style": "Minimalist container. Icon top-left. Title bottom-left. Subtle gradient overlay on hover.",
+      "interaction": "Scale 1.02 on hover. Border color shifts to Primary."
+    },
+    "BookingCalendar": {
+      "path": "/app/frontend/src/components/BookingCalendar.js",
+      "base_component": "Shadcn Calendar",
+      "customization": "Remove rounded corners. Use slate-900 background. Selected date = Primary Color glow."
+    },
+    "AppointmentTable": {
+      "path": "/app/frontend/src/components/AppointmentTable.js",
+      "base_component": "Shadcn Table",
+      "customization": "Header: Uppercase, tracking-widest, text-xs, text-muted-foreground. Rows: Hover bg-slate-800/50."
+    }
+  },
+  "image_urls": {
+    "hero_background": {
+      "url": "https://images.pexels.com/photos/1692693/pexels-photo-1692693.jpeg",
+      "alt": "Modern Hospital Night Architecture",
+      "usage": "Landing page background with heavy dark overlay (bg-slate-950/90)"
+    },
+    "doctors": [
+      {
+        "url": "https://images.pexels.com/photos/5215017/pexels-photo-5215017.jpeg",
+        "alt": "Dr. Sarah Chen - Cardiology",
+        "category": "Cardiology"
+      },
+      {
+        "url": "https://images.pexels.com/photos/5214995/pexels-photo-5214995.jpeg",
+        "alt": "Dr. James Wilson - Neurology",
+        "category": "Neurology"
+      }
+    ],
+    "abstract_textures": [
+      {
+        "url": "https://images.pexels.com/photos/7789851/pexels-photo-7789851.jpeg",
+        "alt": "Abstract DNA",
+        "usage": "Subtle background texture for 'Neurology' department card"
+      },
+      {
+        "url": "https://images.pexels.com/photos/4222165/pexels-photo-4222165.jpeg",
+        "alt": "X-Ray Art",
+        "usage": "Subtle background texture for 'Orthopedics' department card"
+      }
+    ]
+  },
+  "icons": {
+    "library": "lucide-react",
+    "style": "Stroke width 1.5px. Color: Text-Main or Primary.",
+    "mapping": {
+      "Cardiology": "HeartPulse",
+      "Neurology": "Brain",
+      "Orthopedics": "Bone",
+      "Pediatrics": "Baby",
+      "Dermatology": "Fingerprint",
+      "Ophthalmology": "Eye",
+      "General": "Stethoscope",
+      "Admin": "ShieldCheck",
+      "Doctor": "Activity",
+      "Patient": "User"
+    }
+  },
+  "motion": {
+    "library": "framer-motion",
+    "transitions": {
+      "page_load": "initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, ease: 'easeOut' }}",
+      "hover_lift": "whileHover={{ y: -4 }} transition={{ type: 'spring', stiffness: 300 }}"
+    }
+  },
+  "instructions_to_main_agent": [
+    "1. UPDATE /app/frontend/src/index.css with the provided Tailwind Config Extension colors (convert HSL values to CSS variables).",
+    "2. INSTALL 'lucide-react', 'framer-motion', 'clsx', 'tailwind-merge' if not present.",
+    "3. CREATE the 'RoleSelector' as the entry point (Landing Page).",
+    "4. USE the 'Bento Grid' layout for the Patient Dashboard department selection.",
+    "5. ENSURE all text has sufficient contrast against the dark slate background.",
+    "6. DO NOT use standard blue links. Use the Primary Teal for interactive text.",
+    "7. MOCK DATA: Create a robust mock data file for Doctors and Departments since there is no backend yet.",
+    "8. USE 'sonner' for all booking confirmation toasts."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms.",
+    "You MUST NOT center align the app container.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations.",
+    "NEVER use AI assistant Emoji characters for icons.",
+    "Every interaction needs micro-animations.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Prioritize using pre-existing components from src/components/ui when applicable."
+  ]
+}
