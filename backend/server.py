@@ -17,7 +17,7 @@ client = MongoClient(
     tls=True,
     tlsCAFile=certifi.where()
 )
-
+db = client["hospital_db"]
 # Create the main app without a prefix
 app = FastAPI()
 
