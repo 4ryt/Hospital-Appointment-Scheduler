@@ -12,7 +12,7 @@ from datetime import datetime, timezone
 from pymongo import MongoClient
 import certifi
 
-client = MongoClient(
+client = AsyncIOMotorClient(
     os.getenv("MONGO_URI"),
     tls=True,
     tlsCAFile=certifi.where()
